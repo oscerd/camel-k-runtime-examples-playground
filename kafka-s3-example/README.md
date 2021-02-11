@@ -13,7 +13,7 @@ docker run --rm -ti \
     -e AWS_ACCESS_KEY=<access_key> \
     -e AWS_SECRET_KEY=<secret_key> \
     --network="host" \
-    quay.io/lburgazzoli/camel-k-runtime-example-yaml:1.6.0-native
+    quay.io/oscerd/camel-k-runtime-example-kafka-s3:1.6.0-jvm
 ```
 
 You'll need a running Kafka broker locally on your host.
