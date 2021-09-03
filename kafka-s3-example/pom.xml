@@ -34,13 +34,13 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
 
-        <quarkus.version>1.11.1.Final</quarkus.version>
+        <quarkus.version>2.0.0.Final</quarkus.version>
         <quarkus.container-image.build>true</quarkus.container-image.build>
         <quarkus.container-image.group>quay.io/oscerd</quarkus.container-image.group>
         <quarkus.container-image.name>${project.artifactId}</quarkus.container-image.name>
 
-        <camel-k-runtime.version>1.7.0-SNAPSHOT</camel-k-runtime.version>
-        <camel-quarkus.version>1.6.0</camel-quarkus.version>
+        <camel-k-runtime.version>1.8.0</camel-k-runtime.version>
+        <camel-quarkus.version>2.0.0</camel-quarkus.version>
     </properties>
 
     <dependencyManagement>
@@ -79,12 +79,8 @@
             <artifactId>camel-k-runtime</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.apache.camel.k</groupId>
-            <artifactId>camel-k-loader-yaml</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.camel.k</groupId>
-            <artifactId>camel-k-kamelet</artifactId>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-kamelet</artifactId>
         </dependency>
         <dependency>
             <groupId>org.apache.camel.quarkus</groupId>
@@ -93,6 +89,10 @@
         <dependency>
             <groupId>org.apache.camel.quarkus</groupId>
             <artifactId>camel-quarkus-aws2-s3</artifactId>
+        </dependency>
+       <dependency>
+            <groupId>org.apache.camel.quarkus</groupId>
+            <artifactId>camel-quarkus-yaml-dsl</artifactId>
         </dependency>
     </dependencies>
 
