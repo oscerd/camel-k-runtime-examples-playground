@@ -22,7 +22,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.oscerd</groupId>
     <artifactId>camel-k-runtime-example-kafka-s3</artifactId>
-    <version>1.8.0</version>
+    <version>1.8.2</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -79,12 +79,12 @@
             <artifactId>camel-k-runtime</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.apache.camel</groupId>
-            <artifactId>camel-kamelet</artifactId>
+            <groupId>org.apache.camel.quarkus</groupId>
+            <artifactId>camel-quarkus-kafka</artifactId>
         </dependency>
         <dependency>
             <groupId>org.apache.camel.quarkus</groupId>
-            <artifactId>camel-quarkus-kafka</artifactId>
+            <artifactId>camel-quarkus-kamelet</artifactId>
         </dependency>
         <dependency>
             <groupId>org.apache.camel.quarkus</groupId>
@@ -94,6 +94,11 @@
             <groupId>org.apache.camel.quarkus</groupId>
             <artifactId>camel-quarkus-yaml-dsl</artifactId>
         </dependency>
+<dependency>
+    <groupId>org.apache.camel.kamelets</groupId>
+    <artifactId>camel-kamelets-catalog</artifactId>
+    <version>0.3.0</version>
+</dependency>
     </dependencies>
 
     <build>

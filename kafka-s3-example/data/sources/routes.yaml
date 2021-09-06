@@ -17,13 +17,16 @@
 
 - route:
     from: 
-      uri: "kamelet:k-source"
+      uri: "kamelet:kafka-not-secured-source"
       parameters:
         brokers: "localhost:9092"
+        topic: "testtopic"
     steps:
-      - tod: 
-          uri: "kamelet:k-sink"
+      - to: 
+          uri: "kamelet:aws-s3-sink"
           parameters:
-            bucketName: "camel-kafka-connector"
-            keyName: "${date:now:yyyyMMdd-HHmmssSSS}-${exchangeId}"
+            bucketNameOrArn: "camel-kafka-connector"
+            accessKey: "accessKey"
+            secretKey: "secretKey"
+            region: "region"
 
