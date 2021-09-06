@@ -1,5 +1,7 @@
 # camel-k-runtime-example-kafka-s3
 
+In the routes.yaml file, set correctly the AWS credentials for your S3 bucket.
+
 build:
 ```shell script
 ./mvnw package
@@ -10,8 +12,6 @@ docker:
 docker run --rm -ti \
     -v $PWD/data:/etc/camel:Z \
     -e CAMEL_K_CONF=/etc/camel/application.properties \
-    -e AWS_ACCESS_KEY=<access_key> \
-    -e AWS_SECRET_KEY=<secret_key> \
     --network="host" \
     quay.io/oscerd/camel-k-runtime-example-kafka-s3:1.6.0-jvm
 ```
@@ -26,8 +26,6 @@ docker run --rm -ti \
     -v $PWD/data:/etc/camel:Z \
     -v $PWD/jfr:/work/jfr:Z \
     -e CAMEL_K_CONF=/etc/camel/application.properties \
-    -e AWS_ACCESS_KEY=<access_key> \
-    -e AWS_SECRET_KEY=<secret_key> \
     --network="host" \
     quay.io/oscerd/camel-k-runtime-example-kafka-s3:1.6.0-jvm
 ```
